@@ -14,7 +14,7 @@ class EspecieAPI {
         const nombre = document.getElementById("nombre").value;
         const clasificacion = document.getElementById("clasificacion").value;
         const esperanza_vida =parseInt(document.getElementById("esperanza_vida").value);
-        const peso =  parseFloat(document.getElementById("peso").value);
+        const peso_promedio =  parseFloat(document.getElementById("peso_promedio").value);
 
 
         //Crear un json con esos datos
@@ -23,7 +23,7 @@ class EspecieAPI {
             nombre:nombre,
             clasificacion:clasificacion,
             esperanza_vida:esperanza_vida,
-            peso:peso
+            peso_promedio:peso_promedio
         };
 
         await fetch(
@@ -39,9 +39,11 @@ class EspecieAPI {
 
         console.log("Registro insertado correctamente");
     }
+
     async listarEspecies(){
 
         //Paso 1.
+        //TO DO: La API no debería estar sin protección
         let especies= await fetch("http://localhost:3000/listar_especie");
         especies= await especies.json();
 

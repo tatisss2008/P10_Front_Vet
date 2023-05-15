@@ -1,4 +1,4 @@
-import EspecieAPI from "./EspecieAPI";
+import EspecieAPI from "./EspecieAPI.js";
 
 
 const miEspecie=new EspecieAPI();
