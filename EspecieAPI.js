@@ -43,7 +43,6 @@ class EspecieAPI {
     async listarEspecies(){
 
         //Paso 1.
-        //TO DO: La API no debería estar sin protección
         let especies= await fetch("http://localhost:3000/listar_especie");
         especies= await especies.json();
 
